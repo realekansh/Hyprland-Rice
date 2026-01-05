@@ -1,0 +1,5 @@
+polkit
+polkit-kde-agent
+networkmanager
+bluez
+bluez-utils

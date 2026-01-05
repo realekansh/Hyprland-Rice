@@ -1,0 +1,8 @@
+hyprland
+wayland
+wlroots
+xdg-desktop-portal
+xdg-desktop-portal-hyprland
+seatd
+pipewire
+wireplumber
