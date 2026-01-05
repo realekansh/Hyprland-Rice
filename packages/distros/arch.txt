@@ -3,3 +3,6 @@ polkit-kde-agent
 networkmanager
 bluez
 bluez-utils
+pipewire-pulse
+qt6-wayland
+

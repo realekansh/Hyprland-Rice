@@ -1,0 +1,9 @@
+hyprpaper
+hyprpicker
+hypridle
+hyprlock
+hyprcursor
+hyprutils
+hyprlang
+hyprwayland-scanner
+hyprgraphics

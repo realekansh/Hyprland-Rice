@@ -1,0 +1,3 @@
+thunar
+nautilus-image-converter
+nautilus-open-any-terminal

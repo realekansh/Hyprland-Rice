@@ -1,8 +1,11 @@
 hyprland
-wayland
-wlroots
 xdg-desktop-portal
 xdg-desktop-portal-hyprland
+wayland
+wlroots
 seatd
 pipewire
 wireplumber
+libinput
+mesa
+
