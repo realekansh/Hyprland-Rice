@@ -1,0 +1,108 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 44,
+  "exclusive": true,
+  "gtk-layer-shell": true,
+
+  "modules-left": [
+    "custom/arch",
+    "clock",
+    "mpris"
+  ],
+
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "network",
+    "bluetooth",
+    "backlight",
+    "pulseaudio",
+    "battery",
+    "custom/logout"
+  ],
+
+  "custom/arch": {
+    "format": "",
+    "tooltip": "false",
+    "on-click": "vicinae toggle"
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%S | %F | %A}",
+    "tooltip": "false",
+    "on-click": "thunderbird"
+  },
+
+  "mpris": {
+    "format": "{artist} - {title}",
+    "format-paused": "⏸ {artist} - {title}",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5
+    },
+    "format": "{icon}",
+    "on-click": "activate",
+    "disable-scroll": true,
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    }
+  },
+
+  "network": {
+    "format-wifi": "",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+    "on-click": "nm-applet"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "tooltip": "Bluetooth",
+    "on-click": "/home/notrealekansh/.config/hypr/scripts/rofi-bluetooth.sh"
+  },
+
+  "backlight": {
+    "format": "󰃟  {percent}%",
+    "on-scroll-up": "brightnessctl set +5%",
+    "on-scroll-down": "brightnessctl set 5%-"
+  },
+
+  "pulseaudio": {
+  "format": "{icon} {volume}%",
+  "format-muted": "󰝟 Muted",
+
+  "scroll-step": 5,
+  "on-scroll-up": "pamixer -i 5",
+  "on-scroll-down": "pamixer -d 5",
+
+  "on-click": "pavucontrol",
+
+  "format-icons": {
+    "default": ["", "", ""]
+  }
+},
+
+  "battery": {
+    "format": "{icon}  {capacity}%",
+    "format-icons": ["󰂃","󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"]
+  },
+
+  "custom/logout": {
+    "format": "⏻",
+    "tooltip": "Power Menu",
+    "on-click": "wlogout"
+  }
+}
+

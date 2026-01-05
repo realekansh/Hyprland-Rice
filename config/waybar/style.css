@@ -1,0 +1,163 @@
+/* ===============================
+   MATERIAL 3 – WAYBAR (GTK SAFE)
+   Author: notrealekansh 😎
+   =============================== */
+
+/* ---------- GLOBAL ---------- */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Inter", "JetBrainsMono Nerd Font", sans-serif;
+  font-size: 13.5px;
+  min-height: 0;
+}
+
+/* ---------- BAR BACKGROUND ---------- */
+window#waybar {
+  background: rgba(20, 22, 28, 0.55);
+  color: #e6e9ef;
+}
+
+/* ---------- MODULE CONTAINERS ---------- */
+.modules-left,
+.modules-center,
+.modules-right {
+  margin: 6px 8px;
+}
+
+/* ---------- COMMON PILL STYLE ---------- */
+#custom-arch,
+#clock,
+#mpris,
+#workspaces button,
+#network,
+#bluetooth,
+#custom-vpn,
+#backlight,
+#pulseaudio,
+#battery,
+#custom-logout {
+  padding: 8px 16px;
+  background-color: rgba(255, 255, 255, 0.06);
+  margin: 0 4px;
+  border-radius: 999px;
+  transition:
+    background-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+/* ---------- HOVER EFFECT ---------- */
+#custom-arch:hover,
+#clock:hover,
+#mpris:hover,
+#network:hover,
+#bluetooth:hover,
+#custom-vpn:hover,
+#backlight:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-logout:hover,
+#workspaces button:hover {
+  background-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- ARCH LOGO ---------- */
+#custom-arch {
+  color: #89b4fa;
+  font-size: 14px;
+}
+
+/* ---------- CLOCK ---------- */
+#clock {
+  color: #cdd6f4;
+  font-weight: 600;
+}
+
+/* ---------- MPRIS ---------- */
+#mpris {
+  color: #a6e3a1;
+}
+#mpris.paused {
+  color: #f9e2af;
+}
+
+/* ---------- WORKSPACES ---------- */
+#workspaces {
+  background: transparent;
+}
+
+#workspaces button {
+  color: #bac2de;
+  padding: 4px 10px;
+}
+
+#workspaces button.active {
+  background-color: rgba(137, 180, 250, 0.25);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(137, 180, 250, 0.45);
+}
+
+#workspaces button.urgent {
+  background-color: rgba(243, 139, 168, 0.3);
+  color: #ffffff;
+}
+
+/* ---------- NETWORK ---------- */
+#network {
+  color: #89dceb;
+}
+
+/* ---------- BLUETOOTH ---------- */
+#bluetooth {
+  color: #cba6f7;
+}
+
+/* ---------- VPN ---------- */
+#custom-vpn {
+  color: #f38ba8;
+}
+
+/* ---------- BRIGHTNESS ---------- */
+#backlight {
+  color: #f9e2af;
+}
+
+/* ---------- AUDIO ---------- */
+#pulseaudio {
+  color: #fab387;
+}
+
+#pulseaudio.muted {
+  color: #6c7086;
+}
+
+/* ---------- BATTERY ---------- */
+#battery {
+  color: #a6e3a1;
+}
+
+#battery.warning {
+  color: #f9e2af;
+}
+
+#battery.critical {
+  color: #f38ba8;
+}
+
+/* ---------- LOGOUT ---------- */
+#custom-logout {
+  color: #f38ba8;
+}
+
+/* ---------- TOOLTIP ---------- */
+tooltip {
+  background: rgba(25, 27, 33, 0.95);
+  border-radius: 12px;
+  padding: 8px 12px;
+}
+
+tooltip label {
+  color: #e6e9ef;
+}
+
