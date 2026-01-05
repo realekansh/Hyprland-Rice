@@ -10,7 +10,7 @@
 </p>
 
  <p align="center">
-  A simple, interactive way to set up Hyprland with curated configs and optional components.
+  A <strong>simple, interactive way</strong> to set up <strong>Hyprland</strong> with curated configs and optional components.
 </p>
 
 **It provides:**
