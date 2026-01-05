@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/banner.png" alt="Hyprland Rice Banner">
+  <img src="assets/banner.png" alt="Hyprland Rice Banner">
 </p>
 
 <p align="center">
@@ -15,11 +15,11 @@
 
 **It provides:**
 
-- A guided installer,
+- A guided installer
 
-- Optional components you can choose from,
+- Optional components you can choose from
 
-- Ready-to-use configs if you want them.
+- Ready-to-use configs if you want them
 
 **You can use it as a starting point, a reference, or a base to build your own setup on top of.**
 
@@ -28,11 +28,11 @@
 
 **This repo exists to:** 
 
-- Bring those pieces together in one place,
+- Bring those pieces together in one place
 
-- Make setup easier to follow,
+- Make setup easier to follow
 
-- Save time when setting up or redoing a system.
+- Save time when setting up or redoing a system
 
 It doesn’t try to be “**the one true setup**”.
 It’s just a clean starting point that stays out of your way.
@@ -51,7 +51,7 @@ It’s just a clean starting point that stays out of your way.
 
 - Lets you choose optional tools (bar, launcher, notifications, etc.)
 
-- Offers preconfigured configs if you want theme
+- Offers preconfigured configs if you want them
 
 - Backs up existing configs automatically
 
