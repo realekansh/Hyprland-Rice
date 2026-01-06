@@ -41,8 +41,7 @@ It’s just a clean starting point that stays out of your way.
 
  Please refer to the **GitHub Wiki** for full installation steps and guides:
 
-➡️ https://github.com/realekansh/Hyprland-Rice/wiki
-
+---> https://github.com/realekansh/Hyprland-Rice/wiki/Installation-Guide
 
 ## What to expect
 #### ✔  What it does
@@ -71,7 +70,7 @@ It’s just a clean starting point that stays out of your way.
 
 **This README is intentionally kept short.**
 
-All detailed guides and explanations are available in the GitHub Wiki, including:
+All detailed guides and explanations are available in the [**GitHub Wiki**](https://github.com/realekansh/Hyprland-Rice/wiki/Installation-Guide), including:
 
 - Installation walkthrough
 
@@ -88,7 +87,10 @@ All detailed guides and explanations are available in the GitHub Wiki, including
 **If you’re unsure about something, the Wiki is the best place to start.**
 
 ## Credits
-- [Hyprland](https://github.com/hyprwm/Hyprland)
-- [ML4W](https://github.com/mylinuxforwork)
-- Wayland ecosystem projects
-- Linux ricing community
+
+This project is built on top of and inspired by the broader Linux and open-source ecosystem.
+
+- **[Hyprland](https://hypr.land/)** — the Wayland compositor that makes this setup possible  
+- **[ML4W](https://www.ml4w.com/)** — inspiration for workflow ideas and presentation  
+- **Linux Ricing Communities** — for sharing ideas, configs, and endless creativity  
+- **[SyntaxSpin](https://github.com/SyntaxSpin)** — banner and visual identity
