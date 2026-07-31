@@ -1,163 +1,431 @@
-/* ===============================
-   MATERIAL 3 – WAYBAR (GTK SAFE)
-   Author: notrealekansh 😎
-   =============================== */
 
-/* ---------- GLOBAL ---------- */
+/* =========================================================
+ * GLOBAL
+ * ========================================================= */
+
 * {
-  border: none;
-  border-radius: 0;
-  font-family: "Inter", "JetBrainsMono Nerd Font", sans-serif;
-  font-size: 13.5px;
-  min-height: 0;
+    border: none;
+    border-radius: 0;
+    font-family: "Fira Code", FontAwesome;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
 }
 
-/* ---------- BAR BACKGROUND ---------- */
 window#waybar {
-  background: rgba(20, 22, 28, 0.55);
-  color: #e6e9ef;
+    background: rgba(21, 18, 27, 0.6);
+    color: #cdd6f4;
+    transition-property: background-color;
+    transition-duration: 0.5s;
 }
 
-/* ---------- MODULE CONTAINERS ---------- */
-.modules-left,
-.modules-center,
-.modules-right {
-  margin: 6px 8px;
+window#waybar.hidden {
+    opacity: 0.2;
 }
 
-/* ---------- COMMON PILL STYLE ---------- */
-#custom-arch,
+tooltip {
+    background: rgba(8, 7, 10, 0.8);
+    border: 2px solid #11111b;
+    border-radius: 18px;
+}
+
+
+/* =========================================================
+ * SHARED MODULE STYLING
+ * ========================================================= */
+
 #clock,
-#mpris,
-#workspaces button,
 #network,
 #bluetooth,
+#custom-app,
+#custom-rofi,
+#custom-lock_screen,
+#custom-wol,
+#custom-tailscale,
+#custom-updates,
+#custom-github,
 #custom-vpn,
-#backlight,
-#pulseaudio,
+#custom-media,
+#power-profiles-daemon,
+#temperature,
 #battery,
-#custom-logout {
-  padding: 8px 16px;
-  background-color: rgba(255, 255, 255, 0.06);
-  margin: 0 4px;
-  border-radius: 999px;
-  transition:
-    background-color 200ms ease,
-    box-shadow 200ms ease;
+#backlight,
+#custom-wl-gammarelay-temperature,
+#pulseaudio,
+#tray,
+#custom-swaync {
+    background-color: #2f354a;
+    margin: 10px 0;
+    padding: 0 7px;
+    border-radius: 18px;
 }
 
-/* ---------- HOVER EFFECT ---------- */
-#custom-arch:hover,
-#clock:hover,
-#mpris:hover,
-#network:hover,
-#bluetooth:hover,
-#custom-vpn:hover,
-#backlight:hover,
-#pulseaudio:hover,
-#battery:hover,
-#custom-logout:hover,
-#workspaces button:hover {
-  background-color: rgba(255, 255, 255, 0.14);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
+
+/* =========================================================
+ * LEFT SIDE MODULES
+ * ========================================================= */
+
+/* App Launcher */
+
+#custom-app {
+    background: #cdd6f4;
+    color: #1e1e2e;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 
-/* ---------- ARCH LOGO ---------- */
-#custom-arch {
-  color: #89b4fa;
-  font-size: 14px;
-}
 
-/* ---------- CLOCK ---------- */
+/* Clock */
+
 #clock {
-  color: #cdd6f4;
-  font-weight: 600;
+    color: #fab387;
+    margin-left: 2px;
+    margin-right: 10px;
+    padding-left: 14px;
+    padding-right: 12px;
 }
 
-/* ---------- MPRIS ---------- */
-#mpris {
-  color: #a6e3a1;
-}
-#mpris.paused {
-  color: #f9e2af;
+
+/* Media Player */
+
+#custom-media {
+    padding-right: 10px;
+    margin-left: 8px;
+    margin-right: 16px;
+    padding-left: 14px;
 }
 
-/* ---------- WORKSPACES ---------- */
+#custom-media.custom-spotify {
+    color: #1db954;
+    padding-left: 12px;
+}
+
+
+/* =========================================================
+ * MIDDLE SIDE MODULES
+ * ========================================================= */
+
+/* Hyprland Workspaces */
+
 #workspaces {
-  background: transparent;
+    background: rgba(8, 7, 10, 0.6);
+    margin: 5px 5px 5px 5px;
+    padding: 5px 5px;
+    border-radius: 18px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 1px;
+    margin-right: 9px;
+    border: 0.5px solid #032412;
 }
 
 #workspaces button {
-  color: #bac2de;
-  padding: 4px 10px;
+    padding: 0px 6px;
+    margin: 0px 2px;
+    border-radius: 16px;
+    color: #cdd6f4;
+    background-color: #2f354a;
+    transition: all 0.3s ease-in-out;
+    min-width: 22px;
+}
+
+#workspaces button.empty {
+    opacity: 0.4;
 }
 
 #workspaces button.active {
-  background-color: rgba(137, 180, 250, 0.25);
-  color: #ffffff;
-  box-shadow: 0 4px 14px rgba(137, 180, 250, 0.45);
+    color: #2f354a;
+    background-color: #cdd6f4;
+    border-radius: 16px;
+    min-width: 42px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+    /* opacity: 1.0; */
 }
 
 #workspaces button.urgent {
-  background-color: rgba(243, 139, 168, 0.3);
-  color: #ffffff;
+    background-color: #cdd6f4;
+    color: #2f354a;
+    padding: 0 6px;
+    border-radius: 16px;
+    min-width: 34px;
+    background-size: 300% 300%;
 }
 
-/* ---------- NETWORK ---------- */
+#workspaces button:hover {
+    background-color: #cdd6f4;
+    color: #2f354a;
+    border-radius: 16px;
+    min-width: 42px;
+    background-size: 400% 400%;
+}
+
+
+/* =========================================================
+ * RIGHT SIDE MODULES
+ * ========================================================= */
+
+/* Tray */
+
+#tray {
+    margin-right: 8px;
+}
+
+
+/* ---------------------------------------------------------
+ * Connectivity
+ * Network + Bluetooth + VPN
+ * --------------------------------------------------------- */
+
 #network {
-  color: #89dceb;
+    border-radius: 18px 0 0 18px;
+    color: #f9e2af;
+    margin-left: 5px;
+    min-width: 18px;
+    padding-left: 12px;
 }
 
-/* ---------- BLUETOOTH ---------- */
+#network.disabled {
+    color: #f9e2af;
+}
+
 #bluetooth {
-  color: #cba6f7;
+    border-radius: 0;
+    color: #89b4fa;
 }
 
-/* ---------- VPN ---------- */
 #custom-vpn {
-  color: #f38ba8;
+    border-radius: 0 18px 18px 0;
+    color: #a6e3a1;
+    margin-right: 10px;
+    padding-right: 12px;
 }
 
-/* ---------- BRIGHTNESS ---------- */
+#custom-vpn.disconnected {
+    color: #6c7086;
+}
+
+
+/* ---------------------------------------------------------
+ * System Controls
+ * Backlight + Audio + Microphone + Battery
+ * --------------------------------------------------------- */
+
 #backlight {
-  color: #f9e2af;
+    border-radius: 18px 0 0 18px;
+    color: #f9e2af;
+    padding-left: 10px;
 }
 
-/* ---------- AUDIO ---------- */
 #pulseaudio {
-  color: #fab387;
+    border-radius: 0;
+    color: #89b4fa;
 }
 
-#pulseaudio.muted {
-  color: #6c7086;
+#pulseaudio.microphone {
+    border-radius: 0;
+    color: #cba6f7;
 }
 
-/* ---------- BATTERY ---------- */
 #battery {
-  color: #a6e3a1;
+    border-radius: 0 18px 18px 0;
+    padding: 0 0 0 7px;
+    color: #a6e3a1;
+    margin-right: 10px;
+    padding-right: 10px;
 }
 
 #battery.warning {
-  color: #f9e2af;
+    color: #e8db92;
 }
 
 #battery.critical {
-  color: #f38ba8;
+    color: #eba0ac;
 }
 
-/* ---------- LOGOUT ---------- */
-#custom-logout {
-  color: #f38ba8;
+
+/* ---------------------------------------------------------
+ * Notifications / Power
+ * --------------------------------------------------------- */
+
+/* ---------------------------------------------------------
+ * Notifications / Power
+ * --------------------------------------------------------- */
+
+#group-notifications {
+    background-color: #2f354a;
+    border-radius: 18px;
+    margin: 10px 20px 10px 0;
+    padding: 0;
 }
 
-/* ---------- TOOLTIP ---------- */
-tooltip {
-  background: rgba(25, 27, 33, 0.95);
-  border-radius: 12px;
-  padding: 8px 12px;
+/* Shared child styling */
+
+#group-notifications #custom-swaync,
+#group-notifications #custom-power_btn {
+    background: transparent;
+    margin: 0;
+    border: none;
 }
 
-tooltip label {
-  color: #e6e9ef;
+/* Notifications */
+
+#group-notifications #custom-swaync {
+    color: #cdd6f4;
+    border-radius: 18px 0 0 18px;
+    padding: 0 6px 0 10px;
+    min-width: 20px;
 }
 
+/* Power */
+
+#group-notifications #custom-power_btn {
+    color: #cdd6f4;
+    border-radius: 0 18px 18px 0;
+    padding: 0 10px 0 6px;
+}
+
+/* =========================================================
+ * EXTRAS
+ * ========================================================= */
+
+/* Lock Screen */
+
+#custom-lock_screen {
+    border-radius: 0;
+    color: #9c8bfd;
+}
+
+
+/* Tailscale */
+
+#custom-tailscale {
+    border-radius: 0;
+}
+
+#custom-tailscale.green {
+    color: #a6e3a1;
+}
+
+#custom-tailscale.red {
+    color: #fd8b9e;
+}
+
+
+/* Wake-on-LAN */
+
+#custom-wol {
+    border-radius: 0;
+}
+
+#custom-wol.green {
+    color: #a6e3a1;
+}
+
+#custom-wol.red {
+    color: #fd8b9e;
+}
+
+#custom-wol.orange {
+    color: #ffa500;
+}
+
+
+/* ---------------------------------------------------------
+ * Updates / GitHub
+ * --------------------------------------------------------- */
+
+#custom-updates.green,
+#custom-github.green {
+    color: #a6e3a1;
+}
+
+#custom-updates.yellow,
+#custom-github.yellow {
+    color: #e8db92;
+}
+
+#custom-updates.red,
+#custom-github.red {
+    color: #eba0ac;
+}
+
+/* States */
+
+#custom-updates.green,
+#custom-github.green {
+    color: #a6e3a1;
+}
+
+#custom-updates.yellow,
+#custom-github.yellow {
+    color: #e8db92;
+}
+
+#custom-updates.red,
+#custom-github.red {
+    color: #eba0ac;
+}
+
+
+/* Temperature */
+
+#temperature {
+    color: #8be9fd;
+    border-radius: 18px 0 0 18px;
+}
+
+#temperature.critical {
+    color: #eba0ac;
+}
+
+
+/* Power Profiles */
+
+#power-profiles-daemon {
+    border-radius: 0;
+    padding: 0 0 0 7px;
+}
+
+#power-profiles-daemon.power-saver {
+    color: #a6e3a1;
+}
+
+#power-profiles-daemon.balanced {
+    color: #8be9fd;
+}
+
+#power-profiles-daemon.performance {
+    color: #e8db92;
+}
+
+
+/* Gamma Temperature */
+
+#custom-wl-gammarelay-temperature {
+    border-radius: 0;
+    padding: 0 0 0 7px;
+    color: #d99280;
+}
+
+
+/* ---------------------------------------------------------
+ * Standalone Fallbacks
+ * --------------------------------------------------------- */
+
+#custom-swaync {
+    border-radius: 18px 0 0 18px;
+    min-width: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-right: 0;
+}
+
+#custom-power_btn {
+    color: #9c8bfd;
+    background: transparent;
+    border-radius: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 20px;
+}

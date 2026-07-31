@@ -1,0 +1,14 @@
+{
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "",
+        "format-ethernet": "",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ifname}: via {gwaddr}\n<small>down/up:  {bandwidthDownBytes}   {bandwidthUpBytes}</small>",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}/{cidr} via {gwaddr}\n<small>down/up:  {bandwidthDownBytes}   {bandwidthUpBytes}</small>",
+        "format-linked": "",
+        "format-disconnected": "󰤮",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 1,
+	"on-click": "nm-connection-editor"
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "hyprland/workspaces": {
+        "disable-scroll": false,
+        "active-only": false,
+        "all-outputs": true,
+        "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e-1\"})'",
+    "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({workspace = \"e+1\"})'",
+        "format": "{name}{icon}{windows}",
+        "format-icons": {
+            "urgent": "  ",
+            "default": " ",
+            "empty": ""
+        },
+        "window-rewrite": { // TODO complete
+            "title<.*youtube.*>": " ", 
+            "(.*) - Chromium": " ",
+            "(.*)VSCodium": "󰨞 ",
+            "class<Codium>": "󰨞 ",
+            "(.*) - Thunar": " ",
+            "class<discord>": " ",
+            "Steam": " ",
+            "class<org.telegram.desktop>": " ",
+            "WhatsDesk": " ",
+            "Kitty": " ",
+            "class<spotify>": " ",
+            "class<notion>": " ", // TODO add notion's symbol icon
+            "class<unityhub>": " ",
+            "class<Unity>": " ",
+            "class<zenity": " ",
+            "class<MuPDF>": " ",
+            "title<Aggiornamenti>": " ",
+            "title<Pacchetti Installati>": " "
+	    }
+    }
+}

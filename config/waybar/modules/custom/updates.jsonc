@@ -1,0 +1,14 @@
+{
+    "custom/updates": {
+        //"format": " {}",
+        "format": "⟳ {}",
+        // "tooltip-format": "Aggiorna il Sistema\n<small>Pacchetti: {}</small>",
+        "escape": false,
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/getupdates.sh",
+        "restart-interval": 3600,
+        "on-click": "kitty --title Updates sh -c ~/.config/waybar/scripts/installupdates.sh",
+        "on-click-right": "kitty --title 'Installed Packages' sh -c ~/.config/waybar/scripts/listpackages.sh",
+        "tooltip": true
+    }
+}

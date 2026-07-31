@@ -1,0 +1,469 @@
+{
+    /* =========================================================
+     * LEFT SIDE MODULES
+     * ========================================================= */
+
+
+    /* ---------------------------------------------------------
+     * Clock
+     * --------------------------------------------------------- */
+
+    "clock": {
+        "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "locale": "it_IT.UTF-8",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:L%a %d/%m/%y (%H:%M:%S)}",
+
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        }
+    },
+
+
+    /* ---------------------------------------------------------
+     * Media Player
+     * --------------------------------------------------------- */
+
+    "custom/media": {
+        "format": "{}",
+        "escape": true,
+        "return-type": "json",
+        "max-length": 40,
+
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl stop",
+
+        "smooth-scrolling-threshold": 10,
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+
+        "exec": "~/.config/waybar/scripts/mediaplayer.py",
+
+        "tooltip": true,
+        "tooltip-format": "{}"
+    },
+
+
+    /* =========================================================
+     * MIDDLE SIDE MODULES
+     * ========================================================= */
+
+
+    /* ---------------------------------------------------------
+     * Hyprland Workspaces
+     * --------------------------------------------------------- */
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "active-only": false,
+        "all-outputs": true,
+        "on-click": "activate",
+
+        "format": "{name}{icon}{windows}",
+
+        "format-icons": {
+            "urgent": "  ",
+            "default": " ",
+            "empty": ""
+        },
+
+        "window-rewrite": {
+            // TODO: Complete window rewrite rules.
+
+            "title<.*youtube.*>": " ",
+            "(.*) - Chromium": " ",
+            "(.*)VSCodium": "󰨞 ",
+            "class<Codium>": "󰨞 ",
+            "(.*) - Thunar": " ",
+            "class<discord>": " ",
+            "Steam": " ",
+            "class<org.telegram.desktop>": " ",
+            "WhatsDesk": " ",
+            "Kitty": " ",
+            "class<spotify>": " ",
+            "class<notion>": " ",
+            "class<unityhub>": " ",
+            "class<Unity>": " ",
+            "class<zenity": " ",
+            "class<MuPDF>": " ",
+            "title<Aggiornamenti>": " ",
+            "title<Pacchetti Installati>": " "
+        },
+
+        "persistent-workspaces": {
+            "*": 10,
+            "HDMI-A-1": [11, 12],
+            "DP-1": [11, 12]
+        }
+    },
+
+
+    /* =========================================================
+     * RIGHT SIDE MODULES
+     * ========================================================= */
+
+
+    /* ---------------------------------------------------------
+     * Tray
+     * --------------------------------------------------------- */
+
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+
+
+    /* ---------------------------------------------------------
+     * Connectivity
+     * Network + Bluetooth + VPN
+     * --------------------------------------------------------- */
+
+    "network": {
+        // "interface": "wlp2*",
+
+        "format-wifi": "{essid} ({signalStrength}%)  ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnesso 󰌙",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}",
+
+        "tooltip-format": "{ifname}: via {gwaddr} \n<small>down/up:  {bandwidthDownBytes}   {bandwidthUpBytes}</small>",
+
+        "interval": 1,
+        "max-length": 30,
+
+        "on-click-right": "kitty -e nmtui"
+    },
+
+    "bluetooth": {
+        "format": "  ",
+        "format-disabled": "  ",
+        "format-connected": " {num_connections}",
+
+        "tooltip-format": "{device_alias}",
+        "tooltip-format-connected": " {device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+
+        "on-click": "rfkill toggle bluetooth",
+        "on-click-right": "blueman-manager"
+    },
+
+
+    /* ---------------------------------------------------------
+     * System Controls
+     * Backlight + Audio + Microphone + Battery
+     * --------------------------------------------------------- */
+
+    "backlight": {
+        "device": "intel_backlight",
+
+        "format": "{icon} {percent}%",
+        "format-icons": [
+            "󰃞",
+            "󰃟",
+            "󰃠"
+        ],
+
+        "on-scroll-up": "brightnessctl set 1%+",
+        "on-scroll-down": "brightnessctl set 1%-",
+
+        "tooltip-format": "Luminosità",
+        "tooltip": true
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "",
+
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5",
+        "scroll-step": 5,
+
+        "tooltip": true
+    },
+
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": " ",
+
+        "on-click": "pamixer --default-source -t",
+        "on-scroll-up": "pamixer --default-source -i 5",
+        "on-scroll-down": "pamixer --default-source -d 5",
+        "scroll-step": 5
+    },
+
+    "battery": {
+        "states": {
+            "good": 75,
+            "warning": 35,
+            "critical": 20
+        },
+
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{time} {icon}",
+
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ]
+    },
+
+
+    /* ---------------------------------------------------------
+     * Notifications / Power
+     * --------------------------------------------------------- */
+
+    "custom/swaync": {
+        "format": "{icon}",
+
+        "format-icons": {
+            "notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><small><sup>⬤</sup></small></span>",
+            "dnd-none": ""
+        },
+
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+
+        "escape": true,
+        "tooltip": false
+    },
+
+    "custom/power_btn": {
+        "format": "{icon}",
+        "format-icons": [""],
+
+        "on-click": "wlogout --protocol layer-shell",
+
+        "tooltip-format": "Opzioni di Spegnimento",
+        "tooltip": true
+    },
+
+
+    /* =========================================================
+     * EXTRAS
+     * ========================================================= */
+
+
+    /* ---------------------------------------------------------
+     * Hyprland Window
+     * --------------------------------------------------------- */
+
+    "hyprland/window": {
+        "format": "{}",
+
+        "rewrite": {
+            "(.*) - Chromium": " $1",
+            "(.*) - VSCodium": "󰨞 $1",
+            "(.*) - Thunar": " $1",
+            "(.*) - Discord": " $1",
+            "Unity - (.*)": " $1",
+            "Steam": " Steam",
+            "WhatsDesk": " WhatsDesk",
+            "Kitty": " $1",
+            "class<org.gnome.Terminal>": " $1",
+            "class<org.telegram.desktop>": " $1",
+            "class<spotify>": " Spotify",
+            "class<unityhub>": " UnityHub",
+            "class<zenity>": "  Lenovo Vantage"
+        },
+
+        "icon": false,
+        "separate-output": true
+    },
+
+
+    /* ---------------------------------------------------------
+     * Lock Screen
+     * --------------------------------------------------------- */
+
+    "custom/lock_screen": {
+        "format": "{icon}",
+        "format-icons": [""],
+
+        "on-click": "swaylock",
+
+        "tooltip-format": "Schermata di Blocco",
+        "tooltip": true
+    },
+
+
+    /* ---------------------------------------------------------
+     * Updates
+     * --------------------------------------------------------- */
+
+    "custom/updates": {
+        "format": " {}",
+
+        "escape": true,
+        "return-type": "json",
+
+        "exec": "~/.config/waybar/scripts/updates.sh",
+        "restart-interval": 3600,
+
+        "on-click": "kitty --title Aggiornamenti sh -c ~/.config/waybar/scripts/installaupdates.sh",
+        "on-click-right": "kitty --title 'Pacchetti Installati' sh -c ~/.config/waybar/scripts/listpackages.sh",
+
+        "tooltip": true
+    },
+
+
+    /* ---------------------------------------------------------
+     * Wake-on-LAN
+     * --------------------------------------------------------- */
+
+    "custom/wol": {
+        "format": "{icon}",
+        "format-icons": [""],
+
+        "tooltip-format": "Sveglia e Connetti ad Host:\n<small>{}</small>",
+
+        "escape": true,
+        "return-type": "json",
+
+        "exec": "~/.config/waybar/scripts/tailscaleinfo.sh",
+        "interval": 60,
+
+        "on-click": "~/.config/waybar/scripts/wol.sh",
+        "on-click-right": "kitty --title 'Connetti a '$(cat ~/.config/.secrets/hostname.txt)'' sh -c ~/.config/waybar/scripts/connectssh.sh",
+
+        "tooltip": true
+    },
+
+
+    /* ---------------------------------------------------------
+     * GitHub
+     * --------------------------------------------------------- */
+
+    "custom/github": {
+        "format": " {}",
+
+        "return-type": "json",
+        "interval": 60,
+
+        "exec": "~/.config/waybar/scripts/github.sh",
+
+        "on-click": "xdg-open https://github.com/notifications",
+
+        "tooltip-format": "Notifiche GitHub",
+        "tooltip": true
+    },
+
+
+    /* ---------------------------------------------------------
+     * Rofi
+     * --------------------------------------------------------- */
+
+    "custom/rofi": {
+        "format": "{icon} Cerca",
+        "format-icons": [""],
+
+        "on-click": "rofi -show drun",
+
+        "tooltip-format": "Applicazioni"
+    },
+
+
+    /* ---------------------------------------------------------
+     * Temperature
+     * --------------------------------------------------------- */
+
+    "temperature": {
+        "thermal-zone": 7,
+        "interval": 5,
+
+        "format": "{icon}{temperatureC}°C",
+        "format-icons": [" "],
+
+        "critical-threshold": 80,
+        "format-critical": " {temperatureC}°C",
+
+        "format-alt-click": "click-right",
+
+        "on-click": "kitty --title btop sh -c 'btop'",
+
+        "tooltip-format": "Temperatura CPU",
+        "tooltip": true
+    },
+
+
+    /* ---------------------------------------------------------
+     * Power Profiles
+     * --------------------------------------------------------- */
+
+    "power-profiles-daemon": {
+        "format": "{icon} ",
+
+        "format-icons": {
+            "default": "",
+            "performance": "",
+            "balanced": "",
+            "power-saver": ""
+        },
+
+        "tooltip-format": "Opzione di Risparmio: {profile}\nDriver: {driver}",
+        "tooltip": true
+    },
+
+
+    /* ---------------------------------------------------------
+     * Gamma Temperature
+     * --------------------------------------------------------- */
+
+    "custom/wl-gammarelay-temperature": {
+        "format": "{} {icon}",
+        "format-alt": "{icon}",
+        "format-icons": [""],
+
+        "exec": "wl-gammarelay --subscribe Temperature",
+
+        "on-scroll-up": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n +100",
+        "on-scroll-down": "busctl --user -- call rs.wl-gammarelay / rs.wl.gammarelay UpdateTemperature n -100",
+
+        "tooltip-format": "Temperatura Schermo: {} K",
+        "tooltip": true
+    }
+}
