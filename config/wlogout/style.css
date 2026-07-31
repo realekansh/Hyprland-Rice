@@ -1,0 +1,145 @@
+* {
+    background-image: none;
+}
+
+window {
+    background-color: rgba(31, 35, 40, 0.30);
+}
+
+button {
+    background-color: rgba(16, 20, 25, 0.40);
+}
+
+/* ─────────────────────────────
+   Base button
+   ───────────────────────────── */
+
+button {
+    color: #ffffff;
+    background-color: #101419;
+
+    font-size: 13px;
+
+    outline: none;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+
+    background-repeat: no-repeat;
+    background-position: center 28%;
+    background-size: 22%;
+
+    padding: 65px 10px 8px 10px;
+
+    border-radius: 0;
+
+    transition:
+        background-color 0.2s ease,
+        background-size 0.2s cubic-bezier(.55, 0, .28, 1.682),
+        border-radius 0.2s ease,
+        margin 0.2s ease;
+}
+
+button:focus {
+    background-color: #3c475b;
+    background-size: 20%;
+}
+
+button:hover {
+    background-color: #3c475b;
+    background-size: 20%;
+    color: transparent;
+    border-radius: 16px;
+}
+
+/* ─────────────────────────────
+   States
+   ───────────────────────────── */
+
+button:focus {
+    background-color: #3c475b;
+    background-size: 28%;
+}
+
+button:hover {
+    background-color: #3c475b;
+    background-size: 30%;
+    border-radius: 16px;
+}
+
+/* ─────────────────────────────
+   Individual buttons
+   ───────────────────────────── */
+
+#lock {
+    background-image: image(
+        url("/usr/share/wlogout/icons/lock.png"),
+        url("/usr/local/share/wlogout/icons/lock.png")
+    );
+    border-radius: 18px 0 0 18px;
+    margin: 10px 0 10px 10px;
+    background-size: 23%;
+}
+
+#logout {
+    background-image: image(
+        url("/usr/share/wlogout/icons/logout.png"),
+        url("/usr/local/share/wlogout/icons/logout.png")
+    );
+
+    background-position: 52% 28%;
+
+    margin: 10px 0;
+}
+
+#suspend {
+    background-image: image(
+        url("/usr/share/wlogout/icons/suspend.png"),
+        url("/usr/local/share/wlogout/icons/suspend.png")
+    );
+    margin: 10px 0;
+}
+
+#shutdown {
+    background-image: image(
+        url("/usr/share/wlogout/icons/shutdown.png"),
+        url("/usr/local/share/wlogout/icons/shutdown.png")
+    );
+    margin: 10px 0;
+}
+
+#hibernate {
+    background-image: image(
+        url("/usr/share/wlogout/icons/hibernate.png"),
+        url("/usr/local/share/wlogout/icons/hibernate.png")
+    );
+    margin: 10px 0;
+}
+
+#reboot {
+    background-image: image(
+        url("/usr/share/wlogout/icons/reboot.png"),
+        url("/usr/local/share/wlogout/icons/reboot.png")
+    );
+    border-radius: 0 18px 18px 0;
+    margin: 10px 10px 10px 0;
+}
+
+/* ─────────────────────────────
+   Hover geometry
+   ───────────────────────────── */
+
+button:hover#lock {
+    margin: 1px 0 1px 10px;
+}
+
+button:hover#logout,
+button:hover#suspend,
+button:hover#shutdown,
+button:hover#hibernate {
+    margin: 1px 0;
+}
+
+button:hover#reboot {
+    margin: 1px 10px 1px 0;
+}
