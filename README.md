@@ -1,11 +1,22 @@
-# Hyprland Rice
-
 <p align="center"><img src="assets/banner.png" alt="Hyprland Rice banner"></p>
-
+<h1 align="center"> Hyprland Rice </h1>
 <p align="center"><strong>A modular Hyprland desktop project for Arch Linux.</strong><br>
 Lua compositor configuration, Waybar, Rofi, Hyprlock, Hyprpaper, SwayNC, terminals, wallpapers, and a reversible installer.</p>
 
-![Hyprland Rice desktop](assets/screenshots/screenshot.png)
+```text
++------------------------------------------------------------------------------------+
+|  [Apps]  10:45 AM  Artist - Track Title     1 2 [3] 4 5     CPU: 12%  RAM: 4.2G  󰂂 |
++------------------------------------------------------------------------------------+
+|                                                                                    |
+|   +-----------------------------+       +--------------------------------------+   |
+|   | Kitty                       |       | Editor / File Manager                |   |
+|   |  󰣇 ~/Projects/dotfiles main |       | 1:3:4 split, full border             |   |
+|   |  ❯ sudo pacman -Syu         |       | Real-time Git status, file preview   |   |
+|   |                             |       |                                      |   |
+|   +-----------------------------+       +--------------------------------------+   |
+|                                                                                    |
++------------------------------------------------------------------------------------+
+```
 
 ## Features
 
