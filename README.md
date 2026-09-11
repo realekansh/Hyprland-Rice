@@ -17,9 +17,14 @@ Lua compositor configuration, Waybar, Rofi, Hyprlock, Hyprpaper, SwayNC, termina
 
 ## Screenshots
 
-| Desktop | Utilities |
+
+![Desktop](assets/screenshots/desktop.jpg)
+
+| Lockscreen | Tiling |
 | --- | --- |
-| ![Tiling desktop](assets/screenshots/tiling.png) | ![Vicinae](assets/screenshots/vicinae.png) |
+| ![Lockscreen](assets/screenshots/lockscreen.jpg) | ![Tiling](assets/screenshots/tiling.jpg) |
+> [!TIP]
+> Helpful advice see [docs/screenshot](docs/screenshots/) for more views.
 
 ## Installation
 
