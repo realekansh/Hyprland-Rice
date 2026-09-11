@@ -1,0 +1,24 @@
+/* Forest: Lush greens and earthy tones */
+@define-color bar_bg rgba(34, 45, 34, 0.40);
+@define-color tooltip_bg rgba(44, 58, 44, 0.98);
+@define-color tooltip_border #6b8e23;
+@define-color text #e6e9e6;
+@define-color module_icon #8fbc8f;
+@define-color surface #4d604d;
+@define-color utility_bg #556b2f;
+@define-color utility_fg #ffffff;
+@define-color launcher_bg #556b2f;
+@define-color launcher_fg #ffffff;
+@define-color workspace_bg rgba(44, 58, 44, 0.88);
+@define-color workspace_border #3a4d3a;
+@define-color workspace_hover #9acd32;
+@define-color workspace_hover_fg #222d22;
+@define-color inactive #5c6b5c;
+@define-color red #cd5c5c;
+@define-color yellow #bdb76b;
+@define-color green #6b8e23;
+@define-color blue #4682b4;
+@define-color mauve #9370db;
+@define-color cyan #66cdaa;
+@define-color peach #d2691e;
+@define-color spotify #1db954;

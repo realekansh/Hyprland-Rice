@@ -1,0 +1,34 @@
+/* Default: Universal, high-contrast dark glass palette with refined accents. */
+
+/* Base bar & tooltips */
+@define-color bar_bg rgba(17, 19, 24, 0.65);
+@define-color tooltip_bg rgba(17, 19, 24, 0.96);
+@define-color tooltip_border rgba(255, 255, 255, 0.12);
+
+/* Core text & iconography */
+@define-color text #e6edf3;
+@define-color module_icon #58a6ff;
+@define-color inactive #6e7681;
+
+/* Surfaces & badge modules */
+@define-color surface rgba(255, 255, 255, 0.08);
+@define-color utility_bg #58a6ff;
+@define-color utility_fg #0d1117;
+@define-color launcher_bg #58a6ff;
+@define-color launcher_fg #0d1117;
+
+/* Workspaces */
+@define-color workspace_bg rgba(13, 17, 23, 0.75);
+@define-color workspace_border rgba(255, 255, 255, 0.10);
+@define-color workspace_hover #79c0ff;
+@define-color workspace_hover_fg #0d1117;
+
+/* Refined functional accents */
+@define-color red #ff7b72;
+@define-color yellow #f2cc60;
+@define-color green #3fb950;
+@define-color blue #58a6ff;
+@define-color mauve #bc8cff;
+@define-color cyan #39c5cf;
+@define-color peach #ffa657;
+@define-color spotify #1db954;

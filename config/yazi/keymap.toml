@@ -1,0 +1,42 @@
+# Yazi Keymap Configuration
+# Prepend custom keybindings over standard Yazi defaults
+
+[[manager.prepend_keymap]]
+on   = [ "C" ]
+run  = "plugin chmod"
+desc = "Chmod (change file permissions)"
+
+[[manager.prepend_keymap]]
+on   = [ "y", "p" ]
+run  = "copy path"
+desc = "Copy absolute path to clipboard"
+
+[[manager.prepend_keymap]]
+on   = [ "y", "d" ]
+run  = "copy dirname"
+desc = "Copy parent directory path to clipboard"
+
+[[manager.prepend_keymap]]
+on   = [ "y", "n" ]
+run  = "copy filename"
+desc = "Copy filename to clipboard"
+
+[[manager.prepend_keymap]]
+on   = [ "." ]
+run  = "hidden toggle"
+desc = "Toggle hidden files"
+
+[[manager.prepend_keymap]]
+on   = [ "T" ]
+run  = "tab_create --current"
+desc = "Create a new tab with current working directory"
+
+[[manager.prepend_keymap]]
+on   = [ "<C-n>" ]
+run  = "shell --block 'nvim .' --confirm"
+desc = "Open Neovim in current directory"
+
+[[manager.prepend_keymap]]
+on   = [ "<C-s>" ]
+run  = "shell '$SHELL' --block"
+desc = "Open interactive shell in current directory"

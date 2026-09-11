@@ -1,0 +1,25 @@
+/* Catppuccin Latte: clean, low-glare light palette. */
+
+@define-color bar_bg rgba(239, 241, 245, 0.40);
+@define-color tooltip_bg rgba(252, 252, 253, 0.99);
+@define-color tooltip_border #bcc0cc;
+@define-color text #4c4f69;
+@define-color module_icon #1e66f5;
+@define-color surface #dce0e8;
+@define-color utility_bg #1e66f5;
+@define-color utility_fg #eff1f5;
+@define-color launcher_bg #1e66f5;
+@define-color launcher_fg #eff1f5;
+@define-color workspace_bg rgba(230, 233, 239, 0.92);
+@define-color workspace_border #bcc0cc;
+@define-color workspace_hover #acb0be;
+@define-color workspace_hover_fg #4c4f69;
+@define-color inactive #9ca0b0;
+@define-color red #d20f39;
+@define-color yellow #df8e1d;
+@define-color green #40a02b;
+@define-color blue #1e66f5;
+@define-color mauve #8839ef;
+@define-color cyan #179299;
+@define-color peach #fe640b;
+@define-color spotify #1db954;

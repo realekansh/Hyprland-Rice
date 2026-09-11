@@ -1,0 +1,60 @@
+.system-window, .popup-bg {
+    background-color: transparent;
+}
+
+.system-popup-main {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.section-title {
+    font-weight: 800;
+    font-size: 15px;
+    color: #cdd6f4;
+    margin-bottom: 5px;
+}
+
+.tray-container {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+}
+
+.tray-btn {
+    border-radius: 8px;
+    padding: 5px;
+    background: transparent;
+}
+
+.tray-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.metric-box {
+    padding: 8px 10px;
+    color: #cdd6f4;
+    border-radius: 8px;
+    background: transparent;
+    border: none;
+}
+
+.metric-box:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.metric-icon {
+    font-size: 18px;
+}
+
+.metric-name {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.metric-val {
+    font-size: 12px;
+    color: rgba(255,255,255,0.7);
+}

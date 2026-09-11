@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 active_vpn=$(
-    nmcli -t -f TYPE,NAME connection show --active 2>/dev/null \
-        | awk -F: '$1 ~ /vpn|wireguard/ { print $2; found=1 } END { exit found ? 0 : 1 }'
+    nmcli -t -f NAME,TYPE connection show --active \
+        | awk -F: '$2 ~ /vpn|wireguard/ { print $1; found=1 } END { exit found ? 0 : 1 }'
 )
 
 if [ -n "$active_vpn" ]; then

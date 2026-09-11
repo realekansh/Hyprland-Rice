@@ -1,0 +1,25 @@
+/* Dracula: violet accents over a deep, high-contrast surface. */
+
+@define-color bar_bg rgba(40, 42, 54, 0.40);
+@define-color tooltip_bg rgba(33, 34, 44, 0.98);
+@define-color tooltip_border #6272a4;
+@define-color text #f8f8f2;
+@define-color module_icon #bd93f9;
+@define-color surface #343746;
+@define-color utility_bg #bd93f9;
+@define-color utility_fg #282a36;
+@define-color launcher_bg #bd93f9;
+@define-color launcher_fg #282a36;
+@define-color workspace_bg rgba(33, 34, 44, 0.84);
+@define-color workspace_border #44475a;
+@define-color workspace_hover #d6acff;
+@define-color workspace_hover_fg #282a36;
+@define-color inactive #6272a4;
+@define-color red #ff5555;
+@define-color yellow #f1fa8c;
+@define-color green #50fa7b;
+@define-color blue #8be9fd;
+@define-color mauve #bd93f9;
+@define-color cyan #8be9fd;
+@define-color peach #ffb86c;
+@define-color spotify #1db954;

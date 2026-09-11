@@ -1,0 +1,9 @@
+[system]
+cpu = true
+ram = true
+gpu = true
+storage = true
+network_speed = true
+temperature = true
+updates = true
+github = false

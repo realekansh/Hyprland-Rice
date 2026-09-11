@@ -1,0 +1,15 @@
+{
+    "battery": {
+        "states": {
+            "good": 75,
+            "warning": 35,
+            "critical": 20
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "on-click": "~/.config/rofi/battery/battery.sh",
+        "on-click-right": "~/.config/rofi/battery/battery.sh"
+    }
+}

@@ -1,0 +1,5 @@
+Chromium
+Kitty
+Nautilus
+Lollypop
+VS Code

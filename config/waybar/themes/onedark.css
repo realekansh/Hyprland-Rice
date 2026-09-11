@@ -1,0 +1,25 @@
+/* One Dark: modern editor-inspired neutral palette. */
+
+@define-color bar_bg rgba(40, 44, 52, 0.40);
+@define-color tooltip_bg rgba(33, 37, 43, 0.98);
+@define-color tooltip_border #4b5263;
+@define-color text #abb2bf;
+@define-color module_icon #61afef;
+@define-color surface #353b45;
+@define-color utility_bg #61afef;
+@define-color utility_fg #282c34;
+@define-color launcher_bg #61afef;
+@define-color launcher_fg #282c34;
+@define-color workspace_bg rgba(33, 37, 43, 0.88);
+@define-color workspace_border #3e4451;
+@define-color workspace_hover #c8ccd4;
+@define-color workspace_hover_fg #282c34;
+@define-color inactive #5c6370;
+@define-color red #e06c75;
+@define-color yellow #e5c07b;
+@define-color green #98c379;
+@define-color blue #61afef;
+@define-color mauve #c678dd;
+@define-color cyan #56b6c2;
+@define-color peach #d19a66;
+@define-color spotify #1db954;

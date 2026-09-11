@@ -26,6 +26,7 @@ hl.on("hyprland.start", function ()
     -- Start the status bar once Hyprland has exported the Wayland session.
     hl.exec_cmd("waybar")
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("bash \"${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/wallpaper.sh\"")
     hl.exec_cmd("kitty")
     hl.exec_cmd("swaync")
     hl.exec_cmd("vicinae server")

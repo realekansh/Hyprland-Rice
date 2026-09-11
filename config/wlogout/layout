@@ -28,7 +28,7 @@
 
 {
     "label" : "suspend",
-    "action" : "swaylock && systemctl suspend",
+    "action" : "hyprlock & sleep 0.5 && systemctl suspend",
     "text" : "Suspend",
     "keybind": "u"
 }

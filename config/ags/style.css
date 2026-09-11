@@ -1,0 +1,96 @@
+/* ~/.config/ags/style.css */
+@import url('./system_popup.css');
+.media-window {
+    background-color: transparent;
+}
+
+.player-popup {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+    border-radius: 12px;
+    padding: 15px;
+    border: 1px solid #313244;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    font-family: "Inter", sans-serif;
+    min-width: 350px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 2px;
+}
+
+.artist {
+    color: #a6adc8;
+    margin-bottom: 12px;
+    font-size: 0.95em;
+}
+
+.cover {
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 8px;
+    margin-right: 15px;
+    background-size: cover;
+    background-position: center;
+}
+
+.progress-box {
+    margin-bottom: 12px;
+}
+
+.position, .length {
+    font-size: 0.85em;
+    color: #bac2de;
+}
+
+.slider {
+    margin: 0 10px;
+}
+.slider trough {
+    background-color: #313244;
+    border-radius: 8px;
+    min-height: 6px;
+}
+.slider highlight {
+    background-color: #89b4fa;
+    border-radius: 8px;
+}
+.slider slider {
+    background-color: #89b4fa;
+    min-width: 12px;
+    min-height: 12px;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.controls button {
+    background-color: transparent;
+    color: #cdd6f4;
+    border-radius: 50%;
+    min-width: 40px;
+    min-height: 40px;
+    margin: 0 5px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.controls button:hover {
+    background-color: #313244;
+}
+
+.controls button:active {
+    background-color: #89b4fa;
+    color: #1e1e2e;
+}
+
+.controls .btn-play {
+    background-color: #313244;
+    min-width: 45px;
+    min-height: 45px;
+}
+
+.controls .btn-play:hover {
+    background-color: #45475a;
+}

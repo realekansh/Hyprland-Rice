@@ -2,81 +2,45 @@
     /* =========================================================
      * GLOBAL
      * ========================================================= */
-
     "layer": "top",
     "position": "top",
     "mode": "dock",
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
-
-
-    /* =========================================================
-     * INCLUDES
-     * ========================================================= */
-
-    "include": [
-        "~/.config/waybar/modules/*.jsonc",
-        "~/.config/waybar/modules/custom/*.jsonc",
-        "~/.config/waybar/modules/extra/*.jsonc",
-        "~/.config/waybar/modules/hyprland/*.jsonc"
-    ],
-
     "margin-top": 6,
     "margin-left": 10,
     "margin-right": 10,
-
-
     /* =========================================================
-     * LEFT SIDE MODULES
-     * App Launcher + Clock + Media Player
+     * INCLUDES
      * ========================================================= */
-
+    "include": [
+        "~/.config/waybar/modules/includes/*.jsonc",
+        "~/.config/waybar/modules/includes/custom/*.jsonc",
+        "~/.config/waybar/modules/includes/extra/*.jsonc",
+        "~/.config/waybar/modules/includes/hyprland/*.jsonc"
+    ],
+    /* =========================================================
+     * BAR LAYOUT
+     * ========================================================= */
     "modules-left": [
         "custom/app",
         "clock",
         "custom/media"
     ],
-
-
-    /* =========================================================
-     * MIDDLE SIDE MODULES
-     * Hyprland Workspaces
-     * ========================================================= */
-
     "modules-center": [
-        "hyprland/workspaces"
+        "hyprland/workspaces",
     ],
-
-
-    /* =========================================================
-     * RIGHT SIDE MODULES
-     * Tray + Connectivity + System Controls + Notifications/Power
-     * ========================================================= */
-
     "modules-right": [
-		"group/status",
+        "custom/system_popup",
+        "tray",
         "group/connectivity",
         "group/system",
         "group/notifications"
     ],
-
-
     /* =========================================================
-     * GROUP DEFINITIONS
+     * ACTIVE GROUPS
      * ========================================================= */
-
-	 "group/status": {
-    	"orientation": "horizontal",
-    	"modules": [
-        	"custom/updates"
-    	]
-	},
-    /* ---------------------------------------------------------
-     * Connectivity
-     * Network + Bluetooth + VPN
-     * --------------------------------------------------------- */
-
     "group/connectivity": {
         "orientation": "horizontal",
         "modules": [
@@ -85,13 +49,6 @@
             "custom/vpn"
         ]
     },
-
-
-    /* ---------------------------------------------------------
-     * System Controls
-     * Backlight + Audio + Microphone + Battery
-     * --------------------------------------------------------- */
-
     "group/system": {
         "orientation": "horizontal",
         "modules": [
@@ -101,30 +58,19 @@
             "battery"
         ]
     },
-
-
-    /* ---------------------------------------------------------
-     * Notifications / Power
-     * --------------------------------------------------------- */
-
     "group/notifications": {
         "orientation": "horizontal",
         "modules": [
+            "custom/hyprcaffeine",
+	    "custom/separator",
             "custom/swaync",
-            "custom/power_btn"
+            "custom/power_button"
         ]
     },
-
-
     /* =========================================================
-     * EXTRA GROUPS
+     * OPTIONAL GROUPS
+     * These remain available without appearing on the bar.
      * ========================================================= */
-
-
-    /* ---------------------------------------------------------
-     * Audio
-     * --------------------------------------------------------- */
-
     "group/audio": {
         "orientation": "horizontal",
         "modules": [
@@ -132,16 +78,10 @@
             "pulseaudio#microphone"
         ]
     },
-
-
-    /* ---------------------------------------------------------
-     * Exit
-     * --------------------------------------------------------- */
-
     "group/exit": {
         "orientation": "horizontal",
         "modules": [
-            "custom/power_btn"
+            "custom/power_button"
         ]
     }
 }

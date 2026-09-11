@@ -1,0 +1,24 @@
+/* Vaporwave: Pastel pink, cyan, and purple */
+@define-color bar_bg rgba(43, 25, 61, 0.85);
+@define-color tooltip_bg rgba(56, 34, 76, 0.98);
+@define-color tooltip_border #ff71ce;
+@define-color text #b967ff;
+@define-color module_icon #05ffa1;
+@define-color surface #5c3566;
+@define-color utility_bg #01cdfe;
+@define-color utility_fg #2b193d;
+@define-color launcher_bg #01cdfe;
+@define-color launcher_fg #2b193d;
+@define-color workspace_bg rgba(56, 34, 76, 0.88);
+@define-color workspace_border #b967ff;
+@define-color workspace_hover #05ffa1;
+@define-color workspace_hover_fg #2b193d;
+@define-color inactive #75507b;
+@define-color red #ff2a2a;
+@define-color yellow #fffb96;
+@define-color green #05ffa1;
+@define-color blue #01cdfe;
+@define-color mauve #b967ff;
+@define-color cyan #01cdfe;
+@define-color peach #ff71ce;
+@define-color spotify #1db954;

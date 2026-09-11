@@ -1,0 +1,23 @@
+/* =========================================================
+ * LAYOUT: STANDARD (Single continuous bar container)
+ * ========================================================= */
+
+window#waybar {
+  background: @bar_bg;
+  color: @text;
+  padding: 4px 8px;
+  transition: background-color 0.3s ease;
+  margin: 6px 10px 0px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}

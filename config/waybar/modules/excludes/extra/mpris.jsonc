@@ -1,0 +1,22 @@
+{
+    "mpris": {
+        "format": "{player_icon} {dynamic}",
+        "format-paused": "{status_icon} <i>{dynamic}</i>",
+        "player-icons": {
+            "default": "",
+            "spotify": "",
+            "mpv": "",
+            "vlc": "󰕼",
+            "firefox": "",
+            "chromium": ""
+        },
+        "status-icons": {
+            "paused": "󰏤"
+        },
+        "dynamic-order": ["title", "artist"],
+        "dynamic-separator": " - ",
+        "dynamic-len": 40,
+        "tooltip": true,
+        "tooltip-format": "{player}: {title} - {artist}"
+    }
+}

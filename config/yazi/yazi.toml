@@ -1,0 +1,96 @@
+# Yazi File Manager Configuration
+# Desktop Ecosystem: Hyprland / Catppuccin Mocha / JetBrainsMono Nerd Font
+
+[manager]
+ratio          = [1, 3, 4]
+sort_by        = "alphabetical"
+sort_sensitive = false
+sort_reverse   = false
+sort_dir_first = true
+sort_translit  = false
+linemode       = "none"
+show_hidden    = false
+show_symlink   = true
+scrolloff      = 5
+mouse_events   = ["click", "scroll"]
+title_format   = "Yazi: {cwd}"
+
+[preview]
+wrap            = "yes"
+tab_size        = 2
+max_width       = 1000
+max_height      = 1000
+cache_dir       = ""
+image_delay     = 30
+image_quality   = 75
+ueberzug_scale  = 1
+ueberzug_offset = [0, 0, 0, 0]
+
+[opener]
+edit = [
+	{ run = '${EDITOR:-nvim} "$@"', block = true, desc = "Edit in Neovim/Editor", for = "linux" },
+	{ run = 'vim "$@"', block = true, desc = "Edit in Vim", for = "linux" }
+]
+open_image = [
+	{ run = 'loupe "$@"', orphan = true, desc = "Open in Loupe", for = "linux" },
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open with System Default", for = "linux" }
+]
+open_video = [
+	{ run = 'vlc "$@"', orphan = true, desc = "Open in VLC", for = "linux" },
+	{ run = 'totem "$@"', orphan = true, desc = "Open in Totem", for = "linux" },
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open with System Default", for = "linux" }
+]
+open_audio = [
+	{ run = 'vlc "$@"', orphan = true, desc = "Open in VLC", for = "linux" },
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open with System Default", for = "linux" }
+]
+open_pdf = [
+	{ run = 'evince "$@"', orphan = true, desc = "Open in Evince", for = "linux" },
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open with System Default", for = "linux" }
+]
+open_dir = [
+	{ run = 'nautilus "$@"', orphan = true, desc = "Open in Nautilus", for = "linux" }
+]
+open_default = [
+	{ run = 'xdg-open "$@"', orphan = true, desc = "Open with System Default", for = "linux" }
+]
+
+[open]
+rules = [
+	{ url = "*/", use = [ "open_dir", "edit" ] },
+	{ mime = "text/*", use = [ "edit", "open_default" ] },
+	{ mime = "application/json", use = [ "edit", "open_default" ] },
+	{ mime = "application/javascript", use = [ "edit", "open_default" ] },
+	{ mime = "application/x-toml", use = [ "edit", "open_default" ] },
+	{ mime = "application/x-yaml", use = [ "edit", "open_default" ] },
+	{ mime = "image/*", use = [ "open_image", "open_default" ] },
+	{ mime = "video/*", use = [ "open_video", "open_default" ] },
+	{ mime = "audio/*", use = [ "open_audio", "open_default" ] },
+	{ mime = "application/pdf", use = [ "open_pdf", "open_default" ] },
+	{ mime = "application/zip", use = [ "open_default" ] },
+	{ mime = "application/x-7z-compressed", use = [ "open_default" ] },
+	{ mime = "application/x-tar", use = [ "open_default" ] },
+	{ mime = "*", use = [ "edit", "open_default" ] }
+]
+
+[plugin]
+fetchers = [
+	{ id = "git", url = "*", run = "git", group = "git" },
+	{ id = "git", url = "*/", run = "git", group = "git" }
+]
+
+[tasks]
+micro_workers    = 10
+macro_workers    = 25
+bizarre_retry    = 5
+image_alloc      = 536870912
+image_bound      = [0, 0]
+suppress_preload = false
+
+[select]
+open_title  = "Open with:"
+open_origin = "hovered"
+open_offset = [0, 1, 50, 7]
+
+[input]
+cursor_blink = false

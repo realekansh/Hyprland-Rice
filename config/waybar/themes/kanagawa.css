@@ -1,0 +1,25 @@
+/* Kanagawa Wave: ink black, indigo, and traditional accents. */
+
+@define-color bar_bg rgba(31, 31, 40, 0.40);
+@define-color tooltip_bg rgba(22, 22, 29, 0.98);
+@define-color tooltip_border #54546d;
+@define-color text #dcd7ba;
+@define-color module_icon #7e9cd8;
+@define-color surface #2a2a37;
+@define-color utility_bg #7e9cd8;
+@define-color utility_fg #1f1f28;
+@define-color launcher_bg #7e9cd8;
+@define-color launcher_fg #1f1f28;
+@define-color workspace_bg rgba(22, 22, 29, 0.88);
+@define-color workspace_border #363646;
+@define-color workspace_hover #c8c093;
+@define-color workspace_hover_fg #1f1f28;
+@define-color inactive #727169;
+@define-color red #c34043;
+@define-color yellow #c0a36e;
+@define-color green #76946a;
+@define-color blue #7e9cd8;
+@define-color mauve #957fb8;
+@define-color cyan #7aa89f;
+@define-color peach #ffa066;
+@define-color spotify #1db954;

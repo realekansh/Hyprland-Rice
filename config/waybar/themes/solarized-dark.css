@@ -1,0 +1,25 @@
+/* Solarized Dark: balanced low-contrast blue-grey. */
+
+@define-color bar_bg rgba(0, 43, 54, 0.40);
+@define-color tooltip_bg rgba(0, 38, 48, 0.98);
+@define-color tooltip_border #586e75;
+@define-color text #839496;
+@define-color module_icon #268bd2;
+@define-color surface #073642;
+@define-color utility_bg #268bd2;
+@define-color utility_fg #fdf6e3;
+@define-color launcher_bg #268bd2;
+@define-color launcher_fg #fdf6e3;
+@define-color workspace_bg rgba(0, 38, 48, 0.90);
+@define-color workspace_border #174955;
+@define-color workspace_hover #93a1a1;
+@define-color workspace_hover_fg #002b36;
+@define-color inactive #586e75;
+@define-color red #dc322f;
+@define-color yellow #b58900;
+@define-color green #859900;
+@define-color blue #268bd2;
+@define-color mauve #6c71c4;
+@define-color cyan #2aa198;
+@define-color peach #cb4b16;
+@define-color spotify #1db954;

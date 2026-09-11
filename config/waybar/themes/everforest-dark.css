@@ -1,0 +1,25 @@
+/* Everforest Dark: muted forest greens and warm neutrals. */
+
+@define-color bar_bg rgba(45, 53, 48, 0.40);
+@define-color tooltip_bg rgba(39, 47, 42, 0.98);
+@define-color tooltip_border #5c6a63;
+@define-color text #d3c6aa;
+@define-color module_icon #a7c080;
+@define-color surface #4f5b58;
+@define-color utility_bg #a7c080;
+@define-color utility_fg #2d3530;
+@define-color launcher_bg #a7c080;
+@define-color launcher_fg #2d3530;
+@define-color workspace_bg rgba(39, 47, 42, 0.88);
+@define-color workspace_border #56635f;
+@define-color workspace_hover #d3c6aa;
+@define-color workspace_hover_fg #2d3530;
+@define-color inactive #859289;
+@define-color red #e67e80;
+@define-color yellow #dbbc7f;
+@define-color green #a7c080;
+@define-color blue #7fbbb3;
+@define-color mauve #d699b6;
+@define-color cyan #83c092;
+@define-color peach #e69875;
+@define-color spotify #1db954;

@@ -1,0 +1,25 @@
+/* Catppuccin Frappe: soft blue-grey pastel. */
+
+@define-color bar_bg rgba(48, 52, 70, 0.40);
+@define-color tooltip_bg rgba(41, 44, 60, 0.98);
+@define-color tooltip_border #626880;
+@define-color text #c6d0f5;
+@define-color module_icon #8caaee;
+@define-color surface #414559;
+@define-color utility_bg #8caaee;
+@define-color utility_fg #303446;
+@define-color launcher_bg #8caaee;
+@define-color launcher_fg #303446;
+@define-color workspace_bg rgba(41, 44, 60, 0.86);
+@define-color workspace_border #51576d;
+@define-color workspace_hover #b5bfe2;
+@define-color workspace_hover_fg #303446;
+@define-color inactive #737994;
+@define-color red #e78284;
+@define-color yellow #e5c890;
+@define-color green #a6d189;
+@define-color blue #8caaee;
+@define-color mauve #ca9ee6;
+@define-color cyan #81c8be;
+@define-color peach #ef9f76;
+@define-color spotify #1db954;

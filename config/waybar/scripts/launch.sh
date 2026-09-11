@@ -1,4 +1,4 @@
 #!/bin/sh
 
-killall waybar
+killall -q waybar || true
 waybar &

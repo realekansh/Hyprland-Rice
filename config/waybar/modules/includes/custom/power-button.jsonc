@@ -1,0 +1,10 @@
+{
+    "custom/power_button": {
+        "format": "{icon}",
+        "format-icons": ["󰐥"],
+        "on-click": "wlogout --protocol layer-shell",
+        "on-click-right": "~/.config/rofi/powermenu/powermenu.sh",
+        "tooltip-format": "Power Options (Left-click: wlogout | Right-click: Rofi)",
+        "tooltip": true
+    }
+}

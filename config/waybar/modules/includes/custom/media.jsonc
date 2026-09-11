@@ -1,0 +1,14 @@
+{
+    "custom/media": {
+        "format": "{text}",
+        "return-type": "json",
+        "exec": "python3 ~/.config/waybar/scripts/media-scroll.py",
+        "on-click": "~/.config/waybar/scripts/media-toggle.sh",
+        "on-click-right": "python3 ~/.config/waybar/scripts/media-scroll.py --cmd play-pause",
+        "on-click-middle": "python3 ~/.config/waybar/scripts/media-scroll.py --cmd next",
+        "on-scroll-up": "python3 ~/.config/waybar/scripts/media-scroll.py --cmd previous",
+        "on-scroll-down": "python3 ~/.config/waybar/scripts/media-scroll.py --cmd next",
+        "tooltip": false,
+        "escape": true
+    }
+}

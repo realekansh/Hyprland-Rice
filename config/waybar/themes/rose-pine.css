@@ -1,0 +1,25 @@
+/* Rosé Pine: understated mauve and rose tones. */
+
+@define-color bar_bg rgba(25, 23, 36, 0.40);
+@define-color tooltip_bg rgba(31, 29, 46, 0.98);
+@define-color tooltip_border #524f67;
+@define-color text #e0def4;
+@define-color module_icon #c4a7e7;
+@define-color surface #403d52;
+@define-color utility_bg #c4a7e7;
+@define-color utility_fg #191724;
+@define-color launcher_bg #c4a7e7;
+@define-color launcher_fg #191724;
+@define-color workspace_bg rgba(31, 29, 46, 0.88);
+@define-color workspace_border #44415a;
+@define-color workspace_hover #e0def4;
+@define-color workspace_hover_fg #191724;
+@define-color inactive #6e6a86;
+@define-color red #eb6f92;
+@define-color yellow #f6c177;
+@define-color green #9ccfd8;
+@define-color blue #9ccfd8;
+@define-color mauve #c4a7e7;
+@define-color cyan #9ccfd8;
+@define-color peach #ea9a97;
+@define-color spotify #1db954;

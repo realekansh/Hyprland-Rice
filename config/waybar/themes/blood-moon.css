@@ -1,0 +1,24 @@
+/* Blood Moon: Deep reds and dark greys */
+@define-color bar_bg rgba(26, 26, 26, 0.40);
+@define-color tooltip_bg rgba(38, 38, 38, 0.98);
+@define-color tooltip_border #cc0000;
+@define-color text #f2f2f2;
+@define-color module_icon #ff3333;
+@define-color surface #333333;
+@define-color utility_bg #cc0000;
+@define-color utility_fg #ffffff;
+@define-color launcher_bg #cc0000;
+@define-color launcher_fg #ffffff;
+@define-color workspace_bg rgba(38, 38, 38, 0.88);
+@define-color workspace_border #660000;
+@define-color workspace_hover #ff4d4d;
+@define-color workspace_hover_fg #1a1a1a;
+@define-color inactive #4d4d4d;
+@define-color red #ff0000;
+@define-color yellow #ff9900;
+@define-color green #33cc33;
+@define-color blue #3399ff;
+@define-color mauve #9933cc;
+@define-color cyan #33cccc;
+@define-color peach #ff6600;
+@define-color spotify #1db954;

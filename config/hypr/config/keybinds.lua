@@ -17,17 +17,18 @@ local mainMod = "SUPER"
 -- executable existing so the config still loads cleanly when an app is absent
 -- and the absence is discoverable from the Hyprland log instead of a silent
 -- dead key.
-local function executable(path)
-    local f = io.open(path, "r")
-    if not f then return nil end
-    f:close()
+local function executable(command)
+    local pipe = io.popen("command -v " .. command .. " 2>/dev/null")
+    if not pipe then return nil end
+    local path = pipe:read("*l")
+    pipe:close()
     return path
 end
 
-local terminal    = executable("/usr/bin/kitty")
-local fileManager = executable("/usr/bin/nautilus")
-local browser     = executable("/usr/bin/firefox")
-local hyprpicker = executable("/usr/bin/hyprpicker")
+local terminal    = executable("kitty")
+local fileManager = executable("nautilus")
+local browser     = executable("firefox")
+local hyprpicker  = executable("hyprpicker")
 local launcher    = "rofi -show drun"
 
 -- Window lifecycle ----------------------------------------------------------
@@ -75,7 +76,7 @@ end
 -- SUPER + SHIFT + S enters region selection mode. The selected area is copied
 -- directly to the Wayland clipboard without creating a screenshot file.
 
-local hyprshot = executable("/usr/bin/hyprshot")
+local hyprshot = executable("hyprshot")
 
 if hyprshot then
     hl.bind(

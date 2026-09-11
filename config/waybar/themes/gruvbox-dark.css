@@ -1,0 +1,25 @@
+/* Gruvbox Dark: warm, low-glare retro palette. */
+
+@define-color bar_bg rgba(40, 40, 40, 0.40);
+@define-color tooltip_bg rgba(29, 32, 33, 0.98);
+@define-color tooltip_border #665c54;
+@define-color text #ebdbb2;
+@define-color module_icon #d79921;
+@define-color surface #3c3836;
+@define-color utility_bg #d79921;
+@define-color utility_fg #282828;
+@define-color launcher_bg #d79921;
+@define-color launcher_fg #282828;
+@define-color workspace_bg rgba(29, 32, 33, 0.86);
+@define-color workspace_border #504945;
+@define-color workspace_hover #ebdbb2;
+@define-color workspace_hover_fg #282828;
+@define-color inactive #928374;
+@define-color red #fb4934;
+@define-color yellow #fabd2f;
+@define-color green #b8bb26;
+@define-color blue #83a598;
+@define-color mauve #d3869b;
+@define-color cyan #8ec07c;
+@define-color peach #fe8019;
+@define-color spotify #1db954;

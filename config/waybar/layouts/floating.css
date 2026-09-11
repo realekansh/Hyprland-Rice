@@ -1,0 +1,22 @@
+/* =========================================================
+ * LAYOUT: FLOATING ISLANDS (Transparent bar with floating clusters)
+ * ========================================================= */
+
+window#waybar {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 6px 10px 0px 10px;
+  transition: background-color 0.3s ease;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}

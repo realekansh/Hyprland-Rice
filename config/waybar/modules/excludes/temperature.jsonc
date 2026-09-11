@@ -1,0 +1,12 @@
+{
+    "temperature": {
+        "interval": 5,
+        "format": "{temperatureC}°C",
+        "format-alt-click": "click-right",
+        "critical-threshold": 80,
+        "format-critical": "{temperatureC}°C",
+        "on-click": "kitty --title btop sh -c 'btop'",
+        "tooltip-format": "Temperatura CPU",
+        "tooltip": true
+    }
+}

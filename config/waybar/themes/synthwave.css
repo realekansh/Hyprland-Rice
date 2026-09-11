@@ -1,0 +1,25 @@
+/* Synthwave: Neon colors on dark background */
+
+@define-color bar_bg rgba(13, 2, 33, 0.40);
+@define-color tooltip_bg rgba(26, 5, 51, 0.98);
+@define-color tooltip_border #ff007f;
+@define-color text #00ffff;
+@define-color module_icon #ff007f;
+@define-color surface #3c096c;
+@define-color utility_bg #ff007f;
+@define-color utility_fg #0d0221;
+@define-color launcher_bg #ff007f;
+@define-color launcher_fg #0d0221;
+@define-color workspace_bg rgba(26, 5, 51, 0.88);
+@define-color workspace_border #7b2cbf;
+@define-color workspace_hover #00ffff;
+@define-color workspace_hover_fg #0d0221;
+@define-color inactive #5a189a;
+@define-color red #ff004f;
+@define-color yellow #f9e000;
+@define-color green #39ff14;
+@define-color blue #00ffff;
+@define-color mauve #c77dff;
+@define-color cyan #00ffff;
+@define-color peach #ff9e00;
+@define-color spotify #1db954;

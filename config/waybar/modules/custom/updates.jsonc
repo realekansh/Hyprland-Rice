@@ -5,6 +5,7 @@
         // "tooltip-format": "Aggiorna il Sistema\n<small>Pacchetti: {}</small>",
         "escape": false,
         "return-type": "json",
+        "exec-if": "command -v checkupdates >/dev/null 2>&1",
         "exec": "~/.config/waybar/scripts/getupdates.sh",
         "restart-interval": 3600,
         "on-click": "kitty --title Updates sh -c ~/.config/waybar/scripts/installupdates.sh",
