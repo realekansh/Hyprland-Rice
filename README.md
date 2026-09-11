@@ -1,96 +1,61 @@
-<p align="center">
-  <img src="assets/banner.png" alt="Hyprland Rice Banner">
-</p>
+# Hyprland Rice
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Hyprland-Wayland-blue?style=flat-square">
-  <img src="https://img.shields.io/badge/Installer-Interactive-success?style=flat-square">
-  <img src="https://img.shields.io/badge/Logs-Enabled-purple?style=flat-square">
-  <img src="https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square">
-</p>
+<p align="center"><img src="assets/banner.png" alt="Hyprland Rice banner"></p>
 
- <p align="center">
-  A <strong>simple, interactive way</strong> to set up <strong>Hyprland</strong> with curated configs and optional components.
-</p>
+<p align="center"><strong>A modular Hyprland desktop project for Arch Linux.</strong><br>
+Lua compositor configuration, Waybar, Rofi, Hyprlock, Hyprpaper, SwayNC, terminals, wallpapers, and a reversible installer.</p>
 
-**It provides:**
+![Hyprland Rice desktop](assets/screenshots/screenshot.png)
 
-- A guided installer
+## Features
 
-- Optional components you can choose from
+- Modular Hyprland Lua entry point with separate environment, monitor, appearance, animation, input, keybind, rule, and startup modules.
+- A guided installer that detects the host, checks connectivity, asks about every optional feature, logs work, backs up existing files, and rolls back on failure.
+- Purpose-based package manifests instead of one opaque dependency list.
+- Curated Waybar modules, Rofi launcher styling, Hyprlock screen, Hyprpaper wallpaper flow, SwayNC notifications, Kitty/Alacritty terminals, and bundled assets.
+- Merge, replace, or skip existing configuration trees without silently overwriting them.
 
-- Ready-to-use configs if you want them
+## Screenshots
 
-**You can use it as a starting point, a reference, or a base to build your own setup on top of.**
+| Desktop | Utilities |
+| --- | --- |
+| ![Tiling desktop](assets/screenshots/tiling.png) | ![Vicinae](assets/screenshots/vicinae.png) |
 
-## Why this repository exists
-#### Getting started with Hyprland often means jumping between wiki pages, dotfiles, and Reddit posts — which can be fun, but also messy.
+## Installation
 
-**This repo exists to:** 
+The supported automated target is Arch Linux or an Arch-like system with `pacman`. Clone the repository, inspect the plan, and run:
 
-- Bring those pieces together in one place
+```bash
+git clone https://github.com/realekansh/Hyprland-Rice.git
+cd Hyprland-Rice
+./install.sh
+```
 
-- Make setup easier to follow
+Use `./install.sh --dry-run` to inspect detection and package selections without changing the system. Read the [documentation index](docs/README.md) before installing on a working desktop.
 
-- Save time when setting up or redoing a system
-
-It doesn’t try to be “**the one true setup**”.
-It’s just a clean starting point that stays out of your way.
-
-## How to Install this setup?
-
- Please refer to the **GitHub Wiki** for full installation steps and guides:
-
----> https://github.com/realekansh/Hyprland-Rice/wiki/Installation-Guide
-
-## What to expect
-#### ✔  What it does
-
-- Installs Hyprland core components
-
-- Lets you choose optional tools (bar, launcher, notifications, etc.)
-
-- Offers preconfigured configs if you want them
-
-- Backs up existing configs automatically
-
-- Generates a log file for reference
-
-#### ❌ What it doesn’t do
-
-- It won’t force any choices
-
-- It won’t install things silently
-
-- It won’t touch low-level system parts
-
-- You’re always in control of what gets installed.
+The installer does not modify the bootloader, kernel, display manager, or unrelated data. It does install selected packages and may copy files into `$HOME`; those actions are shown interactively and recorded in `logs/`.
 
 ## Documentation
 
-**This README is intentionally kept short.**
+- [Architecture](docs/architecture/overview.md) · [Components](docs/components/hyprland.md) · [Customization](docs/customization/appearance.md)
+- [Keybindings](docs/workflow/keybindings.md) · [Scripts](docs/workflow/scripts.md) · [Wallpapers](docs/workflow/wallpapers.md)
+- [Troubleshooting](docs/troubleshooting/common-issues.md) · [Documentation Index](docs/README.md) · [Changelog](CHANGELOG.md)
 
-All detailed guides and explanations are available in the [**GitHub Wiki**](https://github.com/realekansh/Hyprland-Rice/wiki/Installation-Guide), including:
+## Supported systems
 
-- Installation walkthrough
+Automated package installation is intentionally Arch-first because the active update utilities, package names, and AUR integration are Arch-specific. Other distributions are detected and rejected safely; their package lists can be ported manually using the documentation in [docs/](docs/README.md).
 
-- Package structure
+## Repository structure
 
-- Config system & backups
+```text
+config/       Installed desktop configuration trees
+packages/     Purpose-based Arch package manifests
+scripts/      Installer modules
+assets/       Screenshots, wallpapers, and branding
+docs/         Project documentation
+logs/         Runtime installer logs (ignored by Git)
+```
 
-- Logs and troubleshooting
+## Credits and license
 
-- Extras (Hyprshot, launchers, etc.)
-
-- NixOS-specific guide
-
-**If you’re unsure about something, the Wiki is the best place to start.**
-
-## Credits
-
-This project is built on top of and inspired by the broader Linux and open-source ecosystem.
-
-- **[Hyprland](https://hypr.land/)** — the Wayland compositor that makes this setup possible  
-- **[ML4W](https://www.ml4w.com/)** — inspiration for workflow ideas and presentation  
-- **Linux Ricing Communities** — for sharing ideas, configs, and endless creativity  
-- **[SyntaxSpin](https://github.com/SyntaxSpin)** — banner and visual identity
+Built around [Hyprland](https://hypr.land/), Wayland, Waybar, Rofi, SwayNC, and the wider Linux desktop ecosystem. The banner and visual identity are credited to [SyntaxSpin](https://github.com/SyntaxSpin). The project is released under the [MIT License](LICENSE).
