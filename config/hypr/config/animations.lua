@@ -1,4 +1,4 @@
--- Animation curves and leaves.
+-- Animation curves and leaves. 
 --
 -- Curves are defined first (named, reusable), then animation leaves reference
 -- them by name. Values are tuned for responsiveness: durations are short and
