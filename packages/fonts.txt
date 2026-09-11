@@ -1,0 +1,4 @@
+# Font packages cover the JetBrains/icon glyphs used by Kitty, Rofi and Waybar.
+ttf-jetbrains-mono-nerd
+otf-font-awesome
+cantarell-fonts

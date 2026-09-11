@@ -1,0 +1,5 @@
+# Kitty is the active terminal binding; Alacritty is also shipped as a usable
+# alternate terminal configuration.
+kitty
+alacritty
+bash

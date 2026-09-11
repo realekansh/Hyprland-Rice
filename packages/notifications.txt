@@ -1,0 +1,4 @@
+# Active notification center and the power-menu lock action.
+swaync
+swaylock
+libnotify

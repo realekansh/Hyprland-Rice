@@ -1,0 +1,2 @@
+# Rofi is the active application launcher in keybinds.lua.
+rofi-wayland

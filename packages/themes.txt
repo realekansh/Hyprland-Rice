@@ -1,0 +1,8 @@
+# GTK/icon/cursor foundations. Moga-Black is not bundled in this repository;
+# the installer therefore uses these official defaults when requested.
+gtk3
+gtk4
+gnome-themes-extra
+adw-gtk-theme
+adwaita-icon-theme
+papirus-icon-theme

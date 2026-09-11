@@ -1,0 +1,23 @@
+# Optional modules/scripts only. These are not required by the active layout.
+hypridle
+fzf
+less
+tailscale
+wol
+openssh
+net-tools
+iputils
+thunar
+btop
+# AUR package; the installer uses yay when it is available.
+wlogout
+# yay is an external AUR helper used by the optional Arch update scripts.
+yay
+# Used by keybinds, waybar modules, or shipped config directories.
+hyprsunset
+hyprcaffeine
+vicinae
+yazi
+aylurs-gtk-shell
+nwg-look
+pavucontrol

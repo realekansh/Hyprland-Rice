@@ -1,0 +1,9 @@
+# Hyprland companion programs referenced by the Lua configuration.
+hyprpaper
+hyprlock
+hyprcursor
+hyprpicker
+hyprshot
+grim
+slurp
+wl-clipboard

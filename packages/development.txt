@@ -1,0 +1,4 @@
+# Optional local validation and shell/Lua editing tools.
+lua
+shellcheck
+shfmt

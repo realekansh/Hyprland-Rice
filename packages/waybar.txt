@@ -1,0 +1,6 @@
+# Waybar and its active custom-module runtime.
+waybar
+jq
+python-gobject
+pacman-contrib
+gtk-layer-shell

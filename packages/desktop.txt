@@ -1,0 +1,11 @@
+# Desktop integration used by the active bar, launcher bindings and startup.
+networkmanager
+bluez
+bluez-utils
+blueman
+network-manager-applet
+fastfetch
+firefox
+nautilus
+nm-connection-editor
+upower

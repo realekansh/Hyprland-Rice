@@ -1,0 +1,4 @@
+# Hardware/media bindings and the Waybar MPRIS module.
+playerctl
+brightnessctl
+pamixer
